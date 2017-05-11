@@ -1,0 +1,53 @@
+.filter {
+  display: flex;
+  padding: 11px 0px 12px 22px;
+  font-family: AvenirNext-Bold;
+  border-bottom: #e7e7e7 3px solid;
+}
+
+.filter-icon {
+  margin-right: 29px;
+  width: 55px;
+  height: 55px;
+  background-color: #ebebeb;
+  background-image: url(../images/filter-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-gender-select,
+.filter-size-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-gender-select { width: 180px; }
+
+.filter-size-select {
+  width: 323px;
+  margin-left: 51px;
+}
+
+.filter-size-label {  margin-right: 13px; }
+
+.filter-gender,
+.filter-size {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  align-self: center;
+  color: #d6d6d6;
+  font-size: 24px;
+  font-family: inherit;
+}
+
+.filter-active { color: #4d42f8; }
+
+.filter-hover:hover { color: #090098; }
+
+.filter-hover {
+  transition-property: color;
+  transition-duration: 200ms;
+}
