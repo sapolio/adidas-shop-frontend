@@ -1,5 +1,6 @@
 import React from  'react';
 import Filter from '../Filter/index';
+import Sale_label from '../Sale-label/index';
 import './styles.css';
 import icon1 from './images/goods/00001/bitmap.png';
 import icon2 from './images/goods/00002/bitmap.png';
@@ -13,7 +14,7 @@ export default () => {
         <div className="row">
           <div className="col-lg-4">
             <div className="card product-sale">
-              <span className="product-sale-label">SALE</span>
+              <Sale_label />
               <img src={icon1} alt="00001" className="icon"></img>
               <a href="#" className="product-price">$170</a>
             </div>
@@ -40,7 +41,7 @@ export default () => {
           </div>
           <div className="col-lg-4">
             <div className="card product-sale">
-              <span className="product-sale-label">SALE</span>
+              <Sale_label />
               <img src={icon2} alt="00002" className="icon"></img>
               <a href="#" className="product-price">$170</a>
             </div>

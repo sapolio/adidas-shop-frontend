@@ -3,7 +3,6 @@ import Content from './Content/index'
 import Sidebar from './Sidebar/index'
 import './css/style.css';
 import './css/details.css';
-// import './css/filter.css';
 import './css/grid.css';
 import './css/product-cards.css';
 

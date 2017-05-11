@@ -59,17 +59,3 @@
 .product-price:hover {
   background-image: linear-gradient(107deg, #966dd8, #0c09bf);
 }
-
-.product-sale-label {
-  position: absolute;
-  padding: 7px 21px;
-  box-sizing: border-box;
-  background-color: #ff5c5c;
-  color: #fff;
-  top: 17px;
-  right: 17px;
-  width: 76px;
-  height: 32px;
-  font-size: 14px;
-  font-family: AvenirNext-Bold;
-}
