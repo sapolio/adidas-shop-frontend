@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Gender_select from './Filter-gender-select/index';
-import Size_select from './Filter-size-select/index';
+import GenderSelect from './Filter-gender-select/index';
+import SizeSelect from './Filter-size-select/index';
 import './styles.css';
 
 class App extends Component {
@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <div className="filter">
         <div className="filter-icon"></div>
-        <Gender_select />
-        <Size_select />
+        <GenderSelect />
+        <SizeSelect />
       </div>
     );
   }

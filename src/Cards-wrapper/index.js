@@ -8,7 +8,6 @@ import icon3 from './images/goods/00003/bitmap.png';
 
 export default () => {
   return(
-    <div className="content">
       <Filter />
       <div className="cards-wrapper">
         <div className="row">
@@ -54,6 +53,5 @@ export default () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
