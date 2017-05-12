@@ -1,0 +1,61 @@
+.cards-wrapper {
+  margin-top: 22px;
+  padding: 0 10px 0 24px;
+  background-color: #ffffff;
+}
+
+.cards-wrapper >
+.row {
+  padding-bottom: 24px;
+  width: 1005px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 9px;
+  width: 311px;
+  height: 311px;
+  background-color: #f4f4f4;
+}
+
+.icon {
+  display: block;
+  margin: 0 auto;
+  height: 197px;
+  width: 294px;
+}
+
+.product-price {
+  display: block;
+  margin: 0 auto;
+  padding-top: 27px;
+  box-sizing: border-box;
+  width: 291.6px;
+  height: 91px;
+  background: #ffffff;
+  font-family: AvenirNext-Bold;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #0d0d0d;
+  text-decoration: none;
+  transition-property: background;
+  transition-duration: 200ms;
+}
+
+.product-price:hover { background: #d2d0d0; }
+
+.product-sale
+.product-price {
+  background-image: linear-gradient(107deg, #0c09bf, #966dd8);
+  color: #ffffff;
+}
+
+.product-sale
+.product-price:hover {
+  background-image: linear-gradient(107deg, #966dd8, #0c09bf);
+}

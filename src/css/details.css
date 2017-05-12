@@ -1,0 +1,171 @@
+.detail {
+  position: relative;
+  padding: 35px 32px 0 32px;
+  height: 1618px;
+  width: 1025px;
+  box-sizing: border-box;
+}
+
+.detail-svbtn {
+  margin-top: 14px;
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background-color: #e3e3e3;
+  font-family: AvenirNext-Bold;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 200ms;
+}
+
+.detail-svbtn:hover { background-color: #ffc2c2; }
+
+.detail-pictures { top: 0px; }
+
+.detail-large {
+  height: 525px;
+  margin-left: 47px;
+  margin-top: 20px;
+}
+
+.detail-miniature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -6px;
+  padding-right: 23px;
+}
+
+.detail-stripes { margin: 0 22px; }
+
+.detail-stripes > hr {
+  margin: 3px;
+  width: 159px;
+  height: 3px;
+  border-radius: 1.5px;
+  border: none;
+  background-color: #e7e7e7;
+}
+
+.detail-more-pictures {
+  width: 46px;
+  height: 54px;
+  font-family: AndaleMono;
+  font-size: 14px;
+  color: #c0c0c0; 
+}
+
+.detail-miniature {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.detail-product-description {
+  margin: 20px 0 129px 3px;
+  width: 927px;
+  height: 150px;
+  font-family: AvenirNext-Medium;
+  font-size: 33px;
+  font-weight: 500;
+  line-height: 1.52;
+  text-align: left;
+  color: #d8d8d8;
+}
+
+.detail-product-description >
+.detail-product-description-highlight { color: #6e6e6e; }
+
+.detail-hl-block {
+  position: absolute;
+  top: 30px;
+  left: 32px;
+}
+
+.detail-model-name {
+  margin: 0;
+  font-family: AvenirNext-Bold;
+  font-size: 64px;
+  line-height: 1.0;
+  color: #3a3a3a;
+}
+
+.detail-price-block {
+  position: absolute;
+  right: 33px;
+  top: 39px;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 217px;
+}
+
+.detail-sale-label {
+  width: 76px;
+  height: 32px;
+  padding: 8px 21px;
+  box-sizing: border-box;
+  background-color: #ff5c5c;
+  color: #fff;
+  font-size: 14px;
+  font-family: AvenirNext-Bold;
+}
+
+.detail-price-header {
+  margin: 21px -6px;
+  font-family: AvenirNext-Bold;
+  font-size: 80px;
+  font-weight: bold;
+  text-align: right;
+  color: #e2e2e2;
+}
+
+.color-select {
+  display: flex;
+  justify-content: space-between;
+  width: 111px;
+}
+
+.color-select button {
+  height: 18px;
+  width: 18px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-select button:hover { border: #ff5c5c 1px solid; }
+
+.color-select-1 { background-color: #c5c5c5; }
+.color-select-2 { background-color: #4d87ca; }
+.color-select-3 { background-color: #4a4a4a; }
+.color-select-4 { background-color: #e0e0e0; }
+
+.detail-buy-now {
+  position: fixed;
+  bottom: 0px;
+  margin-left: -32px;
+  padding: 35px 433px;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #4949aa, #27275d);
+  font-family: AvenirNext-Bold;
+  font-size: 32px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.detail-buy-now:hover {
+  background-image: linear-gradient(to right, #27275d, #4949aa);
+}
