@@ -2,5 +2,5 @@ import React from "react";
 import "./styles.css";
 
 export default () => {
-  return <div className="logo" />;
+  return <button className="detail-buy-now">BUY NOW</button>;
 };

@@ -2,5 +2,5 @@ import React from "react";
 import "./styles.css";
 
 export default () => {
-  return <div className="logo" />;
+  return <span className="product-sale-label">SALE</span>;
 };
