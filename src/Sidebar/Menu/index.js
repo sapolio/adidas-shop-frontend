@@ -1,7 +1,7 @@
-import React from "react";
-import Submenu from "./Submenu";
-import menu_arrow from "./images/menu-arrow.png";
-import "./styles.css";
+import React from 'react';
+import Submenu from './Submenu';
+import menu_arrow from './images/menu-arrow.png';
+import './styles.css';
 
 export default () => {
   return (

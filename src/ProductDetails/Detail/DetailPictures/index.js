@@ -1,10 +1,10 @@
-import React from "react";
-import "./styles.css";
-import Large from "./images/details/large.png";
-import Miniature1 from "./images/details/mini-1.png";
-import Miniature2 from "./images/details/mini-2.png";
-import Miniature3 from "./images/details/mini-3.png";
-import Miniature4 from "./images/details/mini-4.png";
+import React from 'react';
+import './styles.css';
+import Large from './images/details/large.png';
+import Miniature1 from './images/details/mini-1.png';
+import Miniature2 from './images/details/mini-2.png';
+import Miniature3 from './images/details/mini-3.png';
+import Miniature4 from './images/details/mini-4.png';
 
 export default () => {
   return (

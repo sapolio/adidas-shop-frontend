@@ -1,9 +1,9 @@
-import React from "react";
-import SaleLabel from "../../SaleLabel";
-import "./styles.css";
-import icon1 from "./images/goods/00001/bitmap.png";
-import icon2 from "./images/goods/00002/bitmap.png";
-import icon3 from "./images/goods/00003/bitmap.png";
+import React from 'react';
+import SaleLabel from '../../SaleLabel';
+import './styles.css';
+import icon1 from './images/goods/00001/bitmap.png';
+import icon2 from './images/goods/00002/bitmap.png';
+import icon3 from './images/goods/00003/bitmap.png';
 
 export default () => {
   return (

@@ -1,6 +1,6 @@
-import React from "react";
-import search_icon from "./images/search-icon.png";
-import "./styles.css";
+import React from 'react';
+import search_icon from './images/search-icon.png';
+import './styles.css';
 
 export default () => {
   return (

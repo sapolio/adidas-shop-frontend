@@ -1,7 +1,7 @@
-import React from "react";
-import Sidebar from "../Sidebar/index";
-import Filter from "./Filter/index";
-import CardsWrapper from "./CardsWrapper";
+import React from 'react';
+import Sidebar from '../Sidebar/index';
+import Filter from './Filter/index';
+import CardsWrapper from './CardsWrapper';
 
 export default () => {
   return (

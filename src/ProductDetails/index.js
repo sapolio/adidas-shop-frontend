@@ -1,6 +1,6 @@
-import React from "react";
-import Sidebar from "../Sidebar";
-import Detail from "./Detail";
+import React from 'react';
+import Sidebar from '../Sidebar';
+import Detail from './Detail';
 
 export default () => {
   return (

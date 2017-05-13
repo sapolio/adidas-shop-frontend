@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import GenderSelect from "./GenderSelect";
-import SizeSelect from "./SizeSelect";
-import "./styles.css";
+import React, { Component } from 'react';
+import GenderSelect from './GenderSelect';
+import SizeSelect from './SizeSelect';
+import './styles.css';
 
 class App extends Component {
   render() {
