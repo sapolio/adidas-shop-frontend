@@ -1,0 +1,21 @@
+.color-select {
+  display: flex;
+  justify-content: space-between;
+  width: 111px;
+}
+
+.color-select button {
+  height: 18px;
+  width: 18px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-select button:hover { border: #ff5c5c 1px solid; }
+
+.color-select-1 { background-color: #c5c5c5; }
+.color-select-2 { background-color: #4d87ca; }
+.color-select-3 { background-color: #4a4a4a; }
+.color-select-4 { background-color: #e0e0e0; }

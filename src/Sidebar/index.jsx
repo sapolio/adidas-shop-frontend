@@ -10,4 +10,4 @@ export default () => (
     <Search />
     <Menu />
   </aside>
-  );
+);

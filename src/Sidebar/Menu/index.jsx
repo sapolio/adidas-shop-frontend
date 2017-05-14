@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Submenu from './Submenu';
 import MenuArrow from './images/menu-arrow.png';
 import './styles.css';
 
 export default () => (
   <nav className="menu">
-    <a href="/" className="menu-item menu-active menu-hover">
-        SPORTS
-        <img src={MenuArrow} alt="strelka" className="menu-active-icon" />
-    </a>
+    <Link to="/details" className="menu-item menu-hover menu-active">
+      SPORTS
+      <img src={MenuArrow} alt="strelka" className="menu-active-icon" />
+    </Link>
     <Submenu />
-    <a href="/" className="menu-item menu-hover">BRANDS</a>
-    <a href="/" className="menu-item menu-hover">MICOACH</a>
+    <Link to="/details" className="menu-item menu-hover">BRANDS</Link>
+    <Link to="/details" className="menu-item menu-hover">MICOACH</Link>
   </nav>
-  );
+);

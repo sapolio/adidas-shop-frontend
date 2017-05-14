@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 export default () => (
   <nav className="submenu">
-    <a href="/" className="submenu-item submenu-active menu-hover">SHOES</a>
-    <a href="/" className="submenu-item menu-hover">CLOTHING</a>
-    <a href="/" className="submenu-item menu-hover">ACCESSORIES</a>
+    <Link to="/details" className="submenu-item submenu-active menu-hover">SHOES</Link>
+    <Link to="/details" className="submenu-item menu-hover">CLOTHING</Link>
+    <Link to="/details" className="submenu-item menu-hover">ACCESSORIES</Link>
   </nav>
 );
