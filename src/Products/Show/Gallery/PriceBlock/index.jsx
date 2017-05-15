@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ColorSelect from './ColorSelect';
-import Label from '../../../components/Label';
+import Label from '../../../../components/Label';
 
 export default () => (
   <div className="detail-price-block">
