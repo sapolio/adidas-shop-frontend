@@ -122,11 +122,9 @@ body { margin: 0; }
 
 .filter-active { color: #4d42f8; }
 
-.filter-hover:hover { color: #090098; }
 
 .filter-hover {
-  transition-property: color;
-  transition-duration: 200ms;
+
 }
 .filter-gender-select {
   display: flex;
@@ -283,28 +281,4 @@ body { margin: 0; }
   border: none;
   outline: none;
   background: none;
-}
-.product-sale-label {
-  position: absolute;
-  top: 17px;
-  right: 17px;
-  box-sizing: border-box;
-  padding: 8px 21px;
-  width: 76px;
-  height: 32px;
-  background-color: #ff5c5c;
-  color: #fff;
-  font-size: 14px;
-  font-family: AvenirNext-Bold;
-}
-
-.detail-sale-label {
-  box-sizing: border-box;
-  padding: 8px 21px;
-  width: 76px;
-  height: 32px;
-  background-color: #ff5c5c;
-  color: #fff;
-  font-size: 14px;
-  font-family: AvenirNext-Bold;
 }

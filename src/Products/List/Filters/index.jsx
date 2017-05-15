@@ -7,19 +7,19 @@ export default () => (
     <div className="filter-icon" />
 
     <div className="filter-gender-select">
-      <Button className="filter-gender filter-active filter-hover">MAN</Button>
-      <Button className="filter-gender filter-hover">WOMAN</Button>
+      <Button className="filter-gender filter-active">MAN</Button>
+      <Button className="filter-gender">WOMAN</Button>
     </div>
 
     <div className="filter-size-select">
       <Label>SIZE</Label>
-      <Button className="filter-size filter-hover">36</Button>
-      <Button className="filter-size filter-hover">37</Button>
-      <Button className="filter-size filter-hover">38</Button>
-      <Button className="filter-size filter-hover">39</Button>
-      <Button className="filter-size filter-hover">40</Button>
-      <Button className="filter-size filter-active filter-hover">41</Button>
-      <Button className="filter-size filter-hover">42</Button>
+      <Button className="filter-size">36</Button>
+      <Button className="filter-size">37</Button>
+      <Button className="filter-size">38</Button>
+      <Button className="filter-size">39</Button>
+      <Button className="filter-size">40</Button>
+      <Button className="filter-size filter-active">41</Button>
+      <Button className="filter-size">42</Button>
     </div>
   </div>
 );

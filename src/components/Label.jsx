@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import './styles.css';
 
 function saleLabel() {
   const Label = styled.span`
