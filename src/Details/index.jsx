@@ -1,12 +1,12 @@
 import React from 'react';
 import Sidebar from '../Sidebar';
-import Detail from './Detail';
+import Gallery from './Gallery';
 
 export default () => (
   <div className="wrapper">
     <Sidebar />
     <div className="content">
-      <Detail />
+      <Gallery />
     </div>
   </div>
 );
