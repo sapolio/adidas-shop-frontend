@@ -1,14 +1,14 @@
 import React from 'react';
 
 import ColorSelect from './ColorSelect';
-import SaleLabel from '../../../SaleLabel';
+import Label from '../../../components/Label';
 import './styles.css';
 
 export default () => (
   <div className="detail-price-block">
     <div className="upper">
       <ColorSelect />
-      <SaleLabel details />
+      <Label details />
     </div>
     <h2 className="detail-price-header">170$</h2>
   </div>

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import React from 'react';
-import SaleLabel from '../../../SaleLabel';
+import Label from '../../../SaleLabel';
 import './styles.css';
 
 function ProductCard({ icon, title, price, sale }) {
   const classNames = sale ? 'card product-sale' : 'card';
-  const label = sale ? <SaleLabel /> : null;
+  const label = sale ? <Label /> : null;
 
   return (
     <div className={classNames}>
