@@ -11,11 +11,13 @@ const CardSaleLebel = styled.div`
 `;
 function ProductCard({ icon, title, price, sale }) {
   const classNames = sale ? 'card product-sale' : 'card';
-  const label = sale ? <CardSaleLebel><SaleLabel /></CardSaleLebel> : null;
 
   return (
     <div className={classNames}>
-      {label}
+      {sale &&
+        <CardSaleLebel>
+          <SaleLabel />
+        </CardSaleLebel>}
       <img src={icon} alt={title} className="icon" />
       <Link to="/details" className="product-price">${price}</Link>
     </div>
