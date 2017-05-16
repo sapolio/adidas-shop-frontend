@@ -75,12 +75,6 @@ body { margin: 0; }
 .product-price:hover {
   background-image: linear-gradient(107deg, #966dd8, #0c09bf);
 }
-.filter {
-  display: flex;
-  padding: 11px 0px 12px 25px;
-  font-family: AvenirNext-Bold;
-  border-bottom: #e7e7e7 3px solid;
-}
 
 .filter-icon {
   margin-right: 29px;
@@ -90,19 +84,6 @@ body { margin: 0; }
   background-image: url(./images/filter-icon.png);
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.filter-gender-select,
-.filter-size-select {
-  display: flex;
-  justify-content: space-between;
-}
-
-.filter-gender-select { width: 180px; }
-
-.filter-size-select {
-  width: 323px;
-  margin-left: 51px;
 }
 
 .filter-size-label {  margin-right: 13px; }
@@ -122,15 +103,6 @@ body { margin: 0; }
 
 .filter-active { color: #4d42f8; }
 
-
-.filter-hover {
-
-}
-.filter-gender-select {
-  display: flex;
-  justify-content: space-between;
-  width: 180px;
-}
 .detail-buy-now {
   position: fixed;
   bottom: 0px;
