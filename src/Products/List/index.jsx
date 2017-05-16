@@ -1,16 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
 
 import icon1 from '../images/00001/bitmap.png';
 import icon2 from '../images/00002/bitmap.png';
 import icon3 from '../images/00003/bitmap.png';
-import Filters from './Filters/index';
+import Filters from './Filters';
 import Card from './Card';
 
+const CardsWrapper = styled.div`
+  padding: 22px 24px 0 25px;
+  background-color: #ffffff;
+`;
 export default () => (
-  <div className="content">
+  <div>
     <Filters />
-    <div className="cards-wrapper">
+    <CardsWrapper>
       <Row>
         <Col type="row" xs={12} sm={6} md={6} lg={4}>
           <Card icon={icon1} title="0001" price="170" sale />
@@ -31,6 +36,6 @@ export default () => (
           <Card icon={icon3} title="0003" price="170" />
         </Col>
       </Row>
-    </div>
+    </CardsWrapper>
   </div>
 );
