@@ -5,7 +5,7 @@ import MenuArrow from './images/menu-arrow.png';
 
 const MenuItem = styled(Link)`
   font-size: 24px;
-  color: ${props => (props.active ? '#ffffff' : '#303030')};
+  color: ${props => (props.isActive ? '#ffffff' : '#303030')};
   text-decoration: none;
   padding-top: 26px;
   font-family: AvenirNext-Bold;
@@ -22,7 +22,7 @@ const SubMenuItem = styled(Link)`
   text-decoration: none;
   padding-bottom: 26px;
   font-family: AndaleMono;
-  color: ${props => (props.active ? '#ffffff' : '#3c3c3c')};
+  color: ${props => (props.isActive ? '#ffffff' : '#3c3c3c')};
   transition-property: color;
   transition-duration: 200ms;
 
@@ -46,12 +46,12 @@ const SubMenu = styled.nav`
 `;
 export default () => (
   <Menu>
-    <MenuItem to="/details" active>
+    <MenuItem to="/details" isActive>
       SPORTS&nbsp;
       <Arrow src={MenuArrow} alt="strelka" />
     </MenuItem>
     <SubMenu>
-      <SubMenuItem to="/details" active>SHOES</SubMenuItem>
+      <SubMenuItem to="/details" isActive>SHOES</SubMenuItem>
       <SubMenuItem to="/details">CLOTHING</SubMenuItem>
       <SubMenuItem to="/details">ACCESSORIES</SubMenuItem>
     </SubMenu>

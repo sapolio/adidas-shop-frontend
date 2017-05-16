@@ -1,12 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 import Sidebar from '../../Sidebar';
 import Gallery from './Gallery';
 
+const Wrapper = styled.div`
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+`;
 export default () => (
-  <div className="wrapper">
+  <Wrapper>
     <Sidebar />
-    <div className="content">
+    <div>
       <Gallery />
     </div>
-  </div>
+  </Wrapper>
 );
