@@ -6,7 +6,7 @@ const ColorSelect = styled.div`
   justify-content: space-between;
   width: 111px;
 `;
-const ColorSelButton = styled.button`
+const Button = styled.button`
   height: 18px;
   width: 18px;
   border: none;
@@ -19,9 +19,9 @@ const ColorSelButton = styled.button`
 `;
 export default () => (
   <ColorSelect>
-    <ColorSelButton bgcolor="#c5c5c5" />
-    <ColorSelButton bgcolor="#4d87ca" />
-    <ColorSelButton bgcolor="#4a4a4a" />
-    <ColorSelButton bgcolor="#e0e0e0" />
+    <Button bgcolor="#c5c5c5" />
+    <Button bgcolor="#4d87ca" />
+    <Button bgcolor="#4a4a4a" />
+    <Button bgcolor="#e0e0e0" />
   </ColorSelect>
 );

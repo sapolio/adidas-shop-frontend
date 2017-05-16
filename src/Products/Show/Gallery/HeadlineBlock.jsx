@@ -6,7 +6,7 @@ const HeadLineBlock = styled.div`
   top: 30px;
   left: 32px;
 `;
-const ModelName = styled.h1`
+const Title = styled.h1`
   margin: 0;
   font-family: AvenirNext-Bold;
   font-size: 64px;
@@ -33,7 +33,7 @@ const SaveButton = styled.button`
 `;
 export default () => (
   <HeadLineBlock>
-    <ModelName>ULTRA<br />BOOST</ModelName>
+    <Title>ULTRA<br />BOOST</Title>
     <SaveButton>SAVE</SaveButton>
   </HeadLineBlock>
 );

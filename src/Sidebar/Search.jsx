@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import Icon from './images/search-icon.png';
 
-const Search = styled.form`
+const Form = styled.form`
   display: flex;
   flex-direction: row;
   padding-left: 10px;
   padding-bottom: 10px;
-  margin: 0px 22px;
+  margin: 27px 22px 0;
   border-bottom: 4px solid #373737;
 `;
-const SearchInput = styled.input`
+const Input = styled.input`
   background-color: transparent;
   color: #3a3a3a;
   font-size: 24px;
@@ -20,8 +20,8 @@ const SearchInput = styled.input`
   font-family: AndaleMono;
 `;
 export default () => (
-  <Search action="#">
+  <Form action="#">
     <img src={Icon} alt="search icon" />
-    <SearchInput type="text" />
-  </Search>
+    <Input type="text" />
+  </Form>
 );

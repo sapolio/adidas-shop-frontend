@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Logotipe from './images/logo.png';
+import logo from './images/logo.png';
 
 const Logo = styled(Link)`
   display: flex;
@@ -10,6 +10,6 @@ const Logo = styled(Link)`
 `;
 export default () => (
   <Logo to="/">
-    <img src={Logotipe} alt="" />
+    <img src={logo} alt="" />
   </Logo>
 );

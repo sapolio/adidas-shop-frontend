@@ -12,14 +12,14 @@ const ProductDescription = styled.p`
   text-align: left;
   color: #d8d8d8;
 `;
-const BrandHilihgt = styled.span`
+const Accent = styled.span`
   color: #6e6e6e;
 `;
 export default () => (
   <ProductDescription>
-    <BrandHilihgt>
+    <Accent>
       Adidas&nbsp;
-    </BrandHilihgt>
+    </Accent>
     is a German multinational corporation,
     headquartered in Herzogenaurach, Germany,
     that designs and manufactures shoes,
