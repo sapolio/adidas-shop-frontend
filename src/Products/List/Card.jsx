@@ -10,22 +10,20 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  width: 311px;
   margin-bottom: 24px;
   padding: 9px;
-  width: 311px;
-  height: 311px;
   background-color: #f4f4f4;
 `;
 const CardSaleLebel = styled.div`
     position: absolute;
-    top: 27px;
+    top: 26px;
     right: 17px;
 `;
 const Icon = styled.img`
   display: block;
   margin: 0 auto;
-  height: 197px;
-  width: 294px;
+  width: 100%;
 `;
 
 function ProductCard({ icon, title, price, sale }) {
