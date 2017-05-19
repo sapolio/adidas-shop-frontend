@@ -10,7 +10,6 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 311px;
   margin-bottom: 24px;
   padding: 9px;
   background-color: #f4f4f4;

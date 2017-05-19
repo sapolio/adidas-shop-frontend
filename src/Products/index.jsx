@@ -8,6 +8,9 @@ const Wrapper = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   height: 100%;
+  @media (max-width: 768px) {
+    display: block;    
+  }
 `;
 export default () => (
   <Wrapper>
