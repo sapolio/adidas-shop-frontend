@@ -7,10 +7,12 @@ import Description from './Description';
 import BuyNow from './BuyNow';
 
 const Details = styled.div`
-  position: relative;
-  padding: 35px 32px 0 32px;
-  width: 1025px;
+  padding: 30px 15px 0 15px;
   box-sizing: border-box;
+  @media (min-width: 768px) {
+    position: relative;
+    padding-left: 32px;
+  }
 `;
 export default () => (
   <Details>

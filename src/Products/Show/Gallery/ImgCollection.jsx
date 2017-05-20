@@ -7,9 +7,13 @@ import Miniature3 from './images/details/mini-3.png';
 import Miniature4 from './images/details/mini-4.png';
 
 const LargePicture = styled.img`
-  height: 525px;
-  margin-left: 47px;
-  margin-top: 20px;
+  height: 250px;
+  margin-top: 30px;
+  @media (min-width: 768px) {
+    height: 525px;
+    margin-left: 47px;
+    margin-top: 20px;
+  }
 `;
 const MiniatureRow = styled.div`
   display: flex;
