@@ -61,7 +61,7 @@ export default () => (
 
     <GenderSelector>
       <Button isActive>MAN</Button>
-      <Button >WOMAN</Button>
+      <Button>WOMAN</Button>
     </GenderSelector>
 
     <SizeSelector>
