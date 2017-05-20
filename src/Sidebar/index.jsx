@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Search from './Search';
 import Menu from './Menu';
 
@@ -17,9 +18,10 @@ const NavPanel = styled.aside`
     min-width: 414px;
     min-height: 100vh;
     padding-top: 50px;
-  }
+  };
 `;
-const Logo = styled.div`
+const Logo = styled(Link)`
+  display: block;
   width: 52px;
   height: 52px;
   margin: 0;
@@ -33,6 +35,7 @@ const Logo = styled.div`
     margin: 0 auto;
     background-size: initial;
     background-position: initial;
+  };
 `;
 
 const Button = styled.div`
@@ -40,23 +43,23 @@ const Button = styled.div`
   width: 53px;
   height: 30px;
   box-sizing: border-box;
-  border-top: solid #ffffff 5px;
-  border-bottom: solid #ffffff 5px;
+  border-top: solid #ffffff 4px;
+  border-bottom: solid #ffffff 4px;
   &:after {
     content: '';
     display: block;
     width: 100%;
     position: relative;
-    top: 7.5px;
-    border-bottom: solid #ffffff 5px;
+    top: 9px;
+    border-bottom: solid #ffffff 4px;
   }
   @media (min-width: 768px) {
     display: none;
+  }
 `;
-
 export default () => (
-  <NavPanel className="nav-panel">
-    <Logo />
+  <NavPanel>
+    <Logo to="/" />
     <Button />
     <Search />
     <Menu />
