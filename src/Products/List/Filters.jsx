@@ -3,9 +3,19 @@ import styled from 'styled-components';
 
 const Filter = styled.div`
   display: flex;
-  padding: 11px 0px 12px 25px;
+  flex-direction: column;
+  padding: 11px 0px 12px 15px;
   font-family: AvenirNext-Bold;
   border-bottom: #e7e7e7 3px solid;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding-left: 25px;
+  }
+  @media (max-width: 768px) {
+    height: 106px;
+    justify-content: space-around;
+    box-sizing: border-box;
+  }
 `;
 const GenderSelector = styled.div`
   display: flex;
@@ -16,7 +26,9 @@ const SizeSelector = styled.div`
   display: flex;
   justify-content: space-between;
   width: 323px;
-  margin-left: 51px;
+  @media (min-width: 768px) {
+    margin-left: 51px;
+  }
 `;
 const FilterIcon = styled.div`
   margin-right: 29px;
@@ -26,6 +38,9 @@ const FilterIcon = styled.div`
   background-image: url(${require('../../images/filter-icon.png')});
   background-repeat: no-repeat;
   background-position: center;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Button = styled.button`

@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import Icon from './images/search-icon.png';
 
 const Form = styled.form`
-  display: flex;
+  display: none;
   flex-direction: row;
   padding-left: 10px;
   padding-bottom: 10px;
-  margin: 27px 22px 0;
+  margin: 37px 22px 0;
   border-bottom: 4px solid #373737;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 const Input = styled.input`
   background-color: transparent;

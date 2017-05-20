@@ -34,10 +34,13 @@ const Arrow = styled.img`
   margin-bottom: 4px;
   `;
 const Menu = styled.nav`
-  display: flex;
+  display: none;
   flex-direction: column;
   margin-top: 122px;
   text-align: center;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 const SubMenu = styled.nav`
   display: flex;
