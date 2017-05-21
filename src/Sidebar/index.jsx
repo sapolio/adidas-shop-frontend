@@ -15,8 +15,8 @@ const NavPanel = styled.aside`
   background-color: #0e0e0e;
   @media (min-width: 768px) {
     display:block;
-    min-width: 414px;
-    min-height: 100vh;
+    max-width: 414px;
+    height: inherit;
     padding-top: 50px;
   };
 `;

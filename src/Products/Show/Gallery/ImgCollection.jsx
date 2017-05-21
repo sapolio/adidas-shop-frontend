@@ -7,20 +7,20 @@ import Miniature3 from './images/details/mini-3.png';
 import Miniature4 from './images/details/mini-4.png';
 
 const LargePicture = styled.img`
-  height: 250px;
-  margin-top: 30px;
+  display: block;
+  max-height: 250px;
+  margin: 0 auto;
+  margin-bottom: 10px;
   @media (min-width: 768px) {
-    height: 525px;
-    margin-left: 47px;
-    margin-top: 20px;
+    display: block;
+    margin: 0 auto;
+    max-height: 525px;
   }
 `;
 const MiniatureRow = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: -6px;
-  padding-right: 23px;
+  justify-content: center;
 `;
 const Miniature = styled.button`
   cursor: pointer;
@@ -28,56 +28,28 @@ const Miniature = styled.button`
   outline: none;
   background: none;
 `;
-const Stripes = styled.div`
-  margin: 0 22px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
+const Img = styled.img`
+  @media (max-width: 768px) {
+    max-height: 55px;
+  }
 `;
-const Hr = styled.hr`
-  margin: 3px;
-  width: 159px;
-  height: 3px;
-  border-radius: 1.5px;
-  border: none;
-  background-color: #e7e7e7;
-`;
-const SeeMore = styled.span`
-  width: 46px;
-  height: 54px;
-  font-family: AndaleMono;
-  font-size: 14px;
-  color: #c0c0c0;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-`;
+
 export default () => (
   <div>
     <LargePicture src={Large} alt="large" />
     <MiniatureRow>
       <Miniature>
-        <img src={Miniature1} alt="1" />
+        <Img src={Miniature1} alt="1" />
       </Miniature>
       <Miniature>
-        <img src={Miniature2} alt="2" />
+        <Img src={Miniature2} alt="2" />
       </Miniature>
       <Miniature>
-        <img src={Miniature3} alt="3" />
+        <Img src={Miniature3} alt="3" />
       </Miniature>
       <Miniature>
-        <img src={Miniature4} alt="4" />
+        <Img src={Miniature4} alt="4" />
       </Miniature>
-      <Stripes>
-        <Hr />
-        <Hr />
-        <Hr />
-      </Stripes>
-      <SeeMore>
-        see<br />more<br />photos
-      </SeeMore>
     </MiniatureRow>
   </div>
 );

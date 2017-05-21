@@ -6,11 +6,9 @@ import Label from '../../../../components/Label';
 const Header = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  align-items: flex-start;
-  @media (min-width: 678px) {
-    position: absolute;
-    right: 33px;
-    top: 39px;
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-end;
   }
 `;
 const Meta = styled.div`
@@ -21,18 +19,20 @@ const Meta = styled.div`
   width: 100%;
   @media (min-width: 768px) {
     width: 217px;
+    flex-direction: row;
   }
 `;
 const Price = styled.h2`
-  margin: 49px 0px 55px;
+  margin: 0;
+  margin-bottom: 8px;
   font-family: AvenirNext-Bold;
   font-size: 80px;
   font-weight: bold;
-  line-height: 0;
+  line-height: 1.2;
   color: #e2e2e2;
   @media (min-width: 768px) {
-  margin: 21px -6px;
-
+  margin: 21px 0;
+  line-height: normal;
   }
 `;
 export default () => (

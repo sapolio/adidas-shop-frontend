@@ -7,7 +7,7 @@ import Description from './Description';
 import BuyNow from './BuyNow';
 
 const Details = styled.div`
-  padding: 30px 15px 0 15px;
+    padding: 30px 15px 0 15px;
   box-sizing: border-box;
   @media (min-width: 768px) {
     position: relative;
@@ -15,11 +15,13 @@ const Details = styled.div`
   }
 `;
 export default () => (
-  <Details>
-    <DetailHeaderBlock />
-    <PriceBlock />
-    <ImgCollection />
-    <Description />
+  <div>
+    <Details>
+      <DetailHeaderBlock />
+      <PriceBlock />
+      <ImgCollection />
+      <Description />
+    </Details>
     <BuyNow />
-  </Details>
+  </div>
 );

@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const HeadLineBlock = styled.div`
   @media (min-width: 768px) {
     position: absolute;
-    top: 30px;
-    left:32px;
+    top: 27px;
+    left:30px;
   }
 `;
 const Title = styled.h1`
@@ -16,6 +16,7 @@ const Title = styled.h1`
   color: #3a3a3a;
   @media (min-width: 768px) {
     font-size: 64px;
+    max-width: 230px;
   }
 `;
 const SaveButton = styled.button`
