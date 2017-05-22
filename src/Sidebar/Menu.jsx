@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import MenuArrow from './images/menu-arrow.png';
 
-const MenuItem = styled(Link)`
+const MenuItem = styled.span`
+  display: block;
   font-size: 24px;
   color: ${props => (props.isActive ? '#ffffff' : '#303030')};
   text-decoration: none;
@@ -37,6 +38,7 @@ const Menu = styled.nav`
   display: none;
   flex-direction: column;
   margin-top: 122px;
+  margin-bottom: 60px;
   text-align: center;
   @media (min-width: 768px) {
     display: flex;
@@ -47,18 +49,21 @@ const SubMenu = styled.nav`
   flex-direction: column;
   margin-top: 16px;
 `;
-export default () => (
-  <Menu>
-    <MenuItem to="/details" isActive>
-      SPORTS&nbsp;
-      <Arrow src={MenuArrow} alt="strelka" />
-    </MenuItem>
-    <SubMenu>
-      <SubMenuItem to="/details" isActive>SHOES</SubMenuItem>
-      <SubMenuItem to="/details">CLOTHING</SubMenuItem>
-      <SubMenuItem to="/details">ACCESSORIES</SubMenuItem>
-    </SubMenu>
-    <MenuItem to="/details">BRANDS</MenuItem>
-    <MenuItem to="/details">MICOACH</MenuItem>
-  </Menu>
-);
+function Navigation() {
+  return (
+    <Menu>
+      <MenuItem title isActive>
+        FOOTBALL&nbsp;
+        <Arrow src={MenuArrow} alt="strelka" />
+      </MenuItem>
+      <SubMenu>
+        <SubMenuItem to="/details" isActive>SHOES</SubMenuItem>
+        <SubMenuItem to="/details">CLOTHING</SubMenuItem>
+        <SubMenuItem to="/details">ACCESSORIES</SubMenuItem>
+      </SubMenu>
+      <MenuItem title>RUNNING</MenuItem>
+      <MenuItem title>BASKETBALL</MenuItem>
+    </Menu>
+  );
+}
+export default Navigation;

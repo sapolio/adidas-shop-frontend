@@ -5,12 +5,10 @@ import Search from './Search';
 import Menu from './Menu';
 
 const NavPanel = styled.aside`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display:block;
+  position: relative;
   box-sizing: border-box;
-  height: 64px;
+  min-height: 64px;
   padding: 6px 12px 6px 10px;
   background-color: #0e0e0e;
   @media (min-width: 768px) {
@@ -39,7 +37,9 @@ const Logo = styled(Link)`
 `;
 
 const Button = styled.div`
-  float: right;
+  position: absolute;
+  right: 12px;
+  top: 17px;
   width: 53px;
   height: 30px;
   box-sizing: border-box;
