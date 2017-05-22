@@ -18,6 +18,11 @@ const MenuItem = styled.span`
     color: #797979;
     }
 `;
+const SubMenu = styled.nav`
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+`;
 const SubMenuItem = styled(Link)`
   font-size: 24px;
   text-decoration: none;
@@ -34,36 +39,23 @@ const SubMenuItem = styled(Link)`
 const Arrow = styled.img`
   margin-bottom: 4px;
   `;
-const Menu = styled.nav`
-  display: none;
-  flex-direction: column;
-  margin-top: 122px;
-  margin-bottom: 60px;
-  text-align: center;
-  @media (min-width: 768px) {
-    display: flex;
+
+class Menu extends Component {
+  render() {
+    return (
+      <div>
+        <MenuItem title isActive>
+          FOOTBALL&nbsp;
+          <Arrow src={MenuArrow} alt="strelka" />
+        </MenuItem>
+        <SubMenu>
+          <SubMenuItem to="/details" isActive>SHOES</SubMenuItem>
+          <SubMenuItem to="/details">CLOTHING</SubMenuItem>
+          <SubMenuItem to="/details">ACCESSORIES</SubMenuItem>
+        </SubMenu>
+      </div>
+    );
   }
-`;
-const SubMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
-`;
-function Navigation() {
-  return (
-    <Menu>
-      <MenuItem title isActive>
-        FOOTBALL&nbsp;
-        <Arrow src={MenuArrow} alt="strelka" />
-      </MenuItem>
-      <SubMenu>
-        <SubMenuItem to="/details" isActive>SHOES</SubMenuItem>
-        <SubMenuItem to="/details">CLOTHING</SubMenuItem>
-        <SubMenuItem to="/details">ACCESSORIES</SubMenuItem>
-      </SubMenu>
-      <MenuItem title>RUNNING</MenuItem>
-      <MenuItem title>BASKETBALL</MenuItem>
-    </Menu>
-  );
 }
-export default Navigation;
+
+export default Menu;

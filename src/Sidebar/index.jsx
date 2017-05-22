@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Search from './Search';
-import Menu from './Menu';
+import Navigation from './Navigation';
 
 const NavPanel = styled.aside`
   display:block;
@@ -62,6 +62,6 @@ export default () => (
     <Logo to="/" />
     <Button />
     <Search />
-    <Menu />
+    <Navigation />
   </NavPanel>
 );
