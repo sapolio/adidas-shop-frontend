@@ -1,35 +1,17 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import MenuArrow from './images/menu-arrow.png';
+import SubMenu from './SubMenu';
 
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
   display: block;
   font-size: 24px;
   color: ${props => (props.isActive ? '#ffffff' : '#303030')};
   text-decoration: none;
-  padding-top: 26px;
   font-family: AvenirNext-Bold;
   font-weight: bold;
-  transition-property: color;
-  transition-duration: 200ms;
-
-  &:hover {
-    color: #797979;
-    }
-`;
-const SubMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
-`;
-const SubMenuItem = styled(Link)`
-  font-size: 24px;
-  text-decoration: none;
-  padding-bottom: 26px;
-  font-family: AndaleMono;
-  color: ${props => (props.isActive ? '#ffffff' : '#3c3c3c')};
   transition-property: color;
   transition-duration: 200ms;
 
@@ -42,17 +24,25 @@ const Arrow = styled.img`
   `;
 
 class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isActive: false };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState(prevState => ({
+      isActive: !prevState.isActive,
+    }));
+  }
   render() {
     return (
-      <MenuItem title isActive>
-        {this.props.title}
-        <Arrow src={MenuArrow} alt="strelka" />
-        <SubMenu>
-          <SubMenuItem to="/details" isActive>SHOES</SubMenuItem>
-          <SubMenuItem to="/details">CLOTHING</SubMenuItem>
-          <SubMenuItem to="/details">ACCESSORIES</SubMenuItem>
-        </SubMenu>
-      </MenuItem>
+      <div>
+        <MenuItem to="/" onClick={this.handleClick} isActive={this.state.isActive && true}>
+          {this.props.title}
+          <Arrow src={MenuArrow} alt="strelka" />
+        </MenuItem>
+        {this.state.isActive && <SubMenu />}
+      </div>
     );
   }
 }

@@ -17,8 +17,8 @@ class Navigation extends Component {
     return (
       <Menu>
         <MenuItem title="FOOTBALL&nbsp;" />
-        <MenuItem title="RUNNING" />
-        <MenuItem title="BASKETBALL" />
+        <MenuItem title="RUNNING&nbsp;" />
+        <MenuItem title="BASKETBALL&nbsp;" />
       </Menu>
     );
   }
