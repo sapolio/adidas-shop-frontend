@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import MenuArrow from './images/menu-arrow.png';
 
-const MenuItem = styled.span`
+const MenuItem = styled.div`
   display: block;
   font-size: 24px;
   color: ${props => (props.isActive ? '#ffffff' : '#303030')};
@@ -43,19 +44,19 @@ const Arrow = styled.img`
 class Menu extends Component {
   render() {
     return (
-      <div>
-        <MenuItem title isActive>
-          FOOTBALL&nbsp;
-          <Arrow src={MenuArrow} alt="strelka" />
-        </MenuItem>
+      <MenuItem title isActive>
+        {this.props.title}
+        <Arrow src={MenuArrow} alt="strelka" />
         <SubMenu>
           <SubMenuItem to="/details" isActive>SHOES</SubMenuItem>
           <SubMenuItem to="/details">CLOTHING</SubMenuItem>
           <SubMenuItem to="/details">ACCESSORIES</SubMenuItem>
         </SubMenu>
-      </div>
+      </MenuItem>
     );
   }
 }
-
+Menu.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 export default Menu;

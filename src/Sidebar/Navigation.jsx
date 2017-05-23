@@ -16,11 +16,9 @@ class Navigation extends Component {
   render() {
     return (
       <Menu>
-        <MenuItem title isActive>
-          FOOTBALL&nbsp;
-        </MenuItem>
-        <MenuItem title>RUNNING</MenuItem>
-        <MenuItem title>BASKETBALL</MenuItem>
+        <MenuItem title="FOOTBALL&nbsp;" />
+        <MenuItem title="RUNNING" />
+        <MenuItem title="BASKETBALL" />
       </Menu>
     );
   }
