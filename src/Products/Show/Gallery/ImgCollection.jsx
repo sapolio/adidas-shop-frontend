@@ -9,6 +9,7 @@ import Miniature4 from './images/details/mini-4.png';
 const LargePicture = styled.img`
   display: block;
   max-height: 250px;
+  max-width: 75%;
   margin: 0 auto;
   margin-bottom: 10px;
   @media (min-width: 768px) {
@@ -19,6 +20,7 @@ const LargePicture = styled.img`
 `;
 const MiniatureRow = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `;

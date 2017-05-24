@@ -11,7 +11,7 @@ const Details = styled.div`
   box-sizing: border-box;
   @media (min-width: 768px) {
     position: relative;
-    padding-left: 32px;
+    padding-left: 30px;
   }
 `;
 export default () => (

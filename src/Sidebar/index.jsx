@@ -10,7 +10,7 @@ const Aside = styled.aside`
   position: relative;
   box-sizing: border-box;
   min-height: 64px;
-  padding: 6px 10px;
+  padding: 17px 15px;
   background-color: #0e0e0e;
   @media (min-width: 768px) {
     display:block;
@@ -21,8 +21,7 @@ const Aside = styled.aside`
 `;
 const Logo = styled.img`
   display: block;
-  margin: 0 auto;
-  height: 52px;
+  height: 30px;
   @media (min-width: 768px) {
     height: 54px;
   };
@@ -30,9 +29,9 @@ const Logo = styled.img`
 
 const Button = styled.div`
   position: absolute;
-  right: 12px;
+  right: 15px;
   top: 17px;
-  width: 53px;
+  width: 40px;
   height: 30px;
   box-sizing: border-box;
   border-top: solid #ffffff 4px;
