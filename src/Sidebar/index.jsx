@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Search from './Search';
 import Navigation from './Navigation';
+import logo from './images/logo.png';
 
 const Aside = styled.aside`
   display:block;
   position: relative;
   box-sizing: border-box;
   min-height: 64px;
-  padding: 6px 12px 6px 10px;
+  padding: 6px 10px;
   background-color: #0e0e0e;
   @media (min-width: 768px) {
     display:block;
@@ -18,21 +19,12 @@ const Aside = styled.aside`
     padding-top: 50px;
   };
 `;
-const Logo = styled(Link)`
+const Logo = styled.img`
   display: block;
-  width: 52px;
+  margin: 0 auto;
   height: 52px;
-  margin: 0;
-  background-image: url(${require('./images/logo.png')});
-  background-position: 8px 10px;
-  background-repeat: no-repeat;
-  background-size: 80%;
   @media (min-width: 768px) {
-    width: 80px;
     height: 54px;
-    margin: 0 auto;
-    background-size: initial;
-    background-position: initial;
   };
 `;
 
@@ -57,6 +49,7 @@ const Button = styled.div`
     display: none;
   }
 `;
+
 class NavPanel extends Component {
   constructor(props) {
     super(props);
@@ -71,7 +64,9 @@ class NavPanel extends Component {
   render() {
     return (
       <Aside>
-        <Logo to="/" />
+        <Link to="/">
+          <Logo src={logo} alt="logo" />
+        </Link>
         <Button onClick={this.handleClick} />
         <Search isActive={this.state.isActive} />
         <Navigation isActive={this.state.isActive} />

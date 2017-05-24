@@ -7,6 +7,8 @@ const Header = styled.div`
   display: flex;
   flex-direction: column-reverse;
   @media (min-width: 768px) {
+    position: absolute;
+    right: 30px;
     flex-direction: column;
     align-items: flex-end;
   }
@@ -18,7 +20,6 @@ const Meta = styled.div`
   align-items: center;
   width: 100%;
   @media (min-width: 768px) {
-    width: 217px;
     flex-direction: row;
   }
 `;
@@ -31,8 +32,8 @@ const Price = styled.h2`
   line-height: 1.2;
   color: #e2e2e2;
   @media (min-width: 768px) {
-  margin: 21px 0;
-  line-height: normal;
+    padding-top: 20px;
+    line-height: normal;
   }
 `;
 export default () => (

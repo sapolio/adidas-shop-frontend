@@ -5,6 +5,9 @@ const ColorSelect = styled.div`
   display: flex;
   justify-content: space-between;
   width: 111px;
+  @media (min-width: 768px) {    
+    margin-right: 30px;
+  }
 `;
 const Button = styled.button`
   height: 18px;
