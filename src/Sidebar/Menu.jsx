@@ -37,7 +37,7 @@ class Menu extends Component {
   render() {
     return (
       <div>
-        <MenuItem to="/" onClick={this.handleClick} isActive={this.state.isActive && true}>
+        <MenuItem to="/" onClick={this.handleClick} isActive={this.state.isActive}>
           {this.props.title}
           <Arrow src={MenuArrow} alt="strelka" />
         </MenuItem>

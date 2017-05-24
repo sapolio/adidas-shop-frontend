@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import MenuItem from './Menu';
 
 const Menu = styled.nav`
-  display: none;
+  display: ${props => (props.isActive ? 'block' : 'none')};
   flex-direction: column;
   margin-top: 122px;
   margin-bottom: 60px;
@@ -12,15 +13,21 @@ const Menu = styled.nav`
     display: flex;
   }
 `;
-class Navigation extends Component {
-  render() {
-    return (
-      <Menu>
-        <MenuItem title="FOOTBALL&nbsp;" />
-        <MenuItem title="RUNNING&nbsp;" />
-        <MenuItem title="BASKETBALL&nbsp;" />
-      </Menu>
-    );
-  }
+function Navigation(props) {
+  return (
+    <Menu isActive={props.isActive}>
+      <MenuItem title="FOOTBALL&nbsp;" />
+      <MenuItem title="RUNNING&nbsp;" />
+      <MenuItem title="BASKETBALL&nbsp;" />
+    </Menu>
+  );
 }
+
+Navigation.propTypes = {
+  isActive: PropTypes.bool,
+};
+Navigation.defaultProps = {
+  isActive: true,
+};
+
 export default Navigation;

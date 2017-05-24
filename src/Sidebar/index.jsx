@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Search from './Search';
 import Navigation from './Navigation';
 
-const NavPanel = styled.aside`
+const Aside = styled.aside`
   display:block;
   position: relative;
   box-sizing: border-box;
@@ -57,11 +57,26 @@ const Button = styled.div`
     display: none;
   }
 `;
-export default () => (
-  <NavPanel>
-    <Logo to="/" />
-    <Button />
-    <Search />
-    <Navigation />
-  </NavPanel>
-);
+class NavPanel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isActive: true };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState(prevState => ({
+      isActive: !prevState.isActive,
+    }));
+  }
+  render() {
+    return (
+      <Aside>
+        <Logo to="/" />
+        <Button onClick={this.handleClick} />
+        <Search isActive={this.state.isActive} />
+        <Navigation isActive={this.state.isActive} />
+      </Aside>
+    );
+  }
+}
+export default NavPanel;

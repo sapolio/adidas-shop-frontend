@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Icon from './images/search-icon.png';
 
 const Form = styled.form`
-  display: none;
+  display: ${props => (props.isActive ? 'block' : 'none')};
   flex-direction: row;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -22,9 +23,20 @@ const Input = styled.input`
   padding-left: 10px;
   font-family: AndaleMono;
 `;
-export default () => (
-  <Form action="#">
-    <img src={Icon} alt="search icon" />
-    <Input type="text" />
-  </Form>
-);
+function Search(props) {
+  return (
+    <Form action="#" isActive={props.isActive}>
+      <img src={Icon} alt="search icon" />
+      <Input type="text" />
+    </Form>
+  );
+}
+
+Search.propTypes = {
+  isActive: PropTypes.bool,
+};
+Search.defaultProps = {
+  isActive: true,
+};
+
+export default Search;
