@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Large from './images/details/large.png';
 import Miniature1 from './images/details/mini-1.png';
@@ -40,27 +40,22 @@ const Img = styled.img`
     max-height: 120px;
   }
 `;
-class ImgCollection extends Component {
-  render() {
-    return (
-      <div>
-        <LargePicture src={Large} alt="large" />
-        <MiniatureRow>
-          <Miniature>
-            <Img src={Miniature1} alt="1" />
-          </Miniature>
-          <Miniature>
-            <Img src={Miniature2} alt="2" />
-          </Miniature>
-          <Miniature>
-            <Img src={Miniature3} alt="3" />
-          </Miniature>
-          <Miniature>
-            <Img src={Miniature4} alt="4" />
-          </Miniature>
-        </MiniatureRow>
-      </div>
-    );
-  }
-}
-export default ImgCollection;
+export default () => (
+  <div>
+    <LargePicture src={Large} alt="large" />
+    <MiniatureRow>
+      <Miniature>
+        <Img src={Miniature1} alt="1" />
+      </Miniature>
+      <Miniature>
+        <Img src={Miniature2} alt="2" />
+      </Miniature>
+      <Miniature>
+        <Img src={Miniature3} alt="3" />
+      </Miniature>
+      <Miniature>
+        <Img src={Miniature4} alt="4" />
+      </Miniature>
+    </MiniatureRow>
+  </div>
+);
