@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import MenuArrow from './images/menu-arrow.png';
-import SubMenu from './SubMenu';
 
 const Button = styled.button`
   padding: 0;
@@ -26,6 +25,11 @@ const Arrow = styled.img`
   margin-bottom: 4px;
   margin-left: 4px;
   `;
+const LinkWrapper = styled.div`
+  display: ${props => (props.isActive ? 'flex' : 'none')};
+  flex-direction: column;
+  margin-top: 16px;
+`;
 
 class Menu extends Component {
   constructor(props) {
@@ -45,12 +49,18 @@ class Menu extends Component {
           {this.props.title}
           <Arrow src={MenuArrow} alt="menu-arrow" />
         </Button>
-        {this.state.isActive && <SubMenu />}
+        <LinkWrapper isActive={this.state.isActive}>
+          {this.props.children}
+        </LinkWrapper>
       </div>
     );
   }
 }
 Menu.propTypes = {
   title: PropTypes.string.isRequired,
+  children: PropTypes.element,
+};
+Menu.defaultProps = {
+  children: null,
 };
 export default Menu;
