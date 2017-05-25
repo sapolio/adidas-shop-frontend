@@ -6,6 +6,7 @@ import MenuItem from './Menu';
 const Menu = styled.nav`
   display: ${props => (props.isActive ? 'block' : 'none')};
   flex-direction: column;
+  justify-content: center;
   margin-top: 122px;
   margin-bottom: 60px;
   text-align: center;

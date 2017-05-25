@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import MenuArrow from './images/menu-arrow.png';
 import SubMenu from './SubMenu';
 
-const MenuItem = styled(Link)`
-  display: block;
+const MenuItem = styled.button`
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
   font-size: 24px;
   color: ${props => (props.isActive ? '#ffffff' : '#303030')};
   text-decoration: none;
@@ -37,7 +40,7 @@ class Menu extends Component {
   render() {
     return (
       <div>
-        <MenuItem to="/" onClick={this.handleClick} isActive={this.state.isActive}>
+        <MenuItem onClick={this.handleClick} isActive={this.state.isActive}>
           {this.props.title}
           <Arrow src={MenuArrow} alt="strelka" />
         </MenuItem>

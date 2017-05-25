@@ -6,13 +6,15 @@ import Navigation from './Navigation';
 import logo from './images/logo.png';
 
 const Aside = styled.aside`
-  display:block;
-  position: relative;
+  position: sticky;
+  top: 0;
+  width: 100%;
   box-sizing: border-box;
   min-height: 64px;
   padding: 17px 15px;
   background-color: #0e0e0e;
   @media (min-width: 768px) {
+    position: relative;
     display:block;
     max-width: 414px;
     height: inherit;
@@ -24,6 +26,7 @@ const Logo = styled.img`
   height: 30px;
   @media (min-width: 768px) {
     height: 54px;
+    margin: 0 auto;
   };
 `;
 
