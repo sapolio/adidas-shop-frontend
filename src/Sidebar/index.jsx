@@ -5,6 +5,17 @@ import Search from './Search';
 import Navigation from './Navigation';
 import logo from './images/logo.png';
 
+const MenuWrapper = styled(Navigation)`
+  display: ${props => (props.isOpened ? 'block' : 'none')};
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 122px;
+  margin-bottom: 60px;
+  text-align: center;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
 const Aside = styled.aside`
   position: sticky;
   top: 0;
@@ -17,7 +28,6 @@ const Aside = styled.aside`
     position: relative;
     display:block;
     max-width: 414px;
-    height: inherit;
     padding-top: 50px;
   };
 `;
@@ -55,12 +65,12 @@ const Button = styled.div`
 class NavPanel extends Component {
   constructor(props) {
     super(props);
-    this.state = { isActive: true };
+    this.state = { isOpened: true };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.setState(prevState => ({
-      isActive: !prevState.isActive,
+      isOpened: !prevState.isOpened,
     }));
   }
   render() {
@@ -70,8 +80,8 @@ class NavPanel extends Component {
           <Logo src={logo} alt="logo" />
         </Link>
         <Button onClick={this.handleClick} />
-        <Search isActive={this.state.isActive} />
-        <Navigation isActive={this.state.isActive} />
+        <Search isOpened={this.state.isOpened} />
+        <MenuWrapper isOpened={this.state.isOpened} />
       </Aside>
     );
   }

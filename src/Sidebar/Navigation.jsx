@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import MenuItem from './Menu';
+import Menu from './Menu';
 
-const Menu = styled.nav`
-  display: ${props => (props.isActive ? 'block' : 'none')};
+const MenuWrapper = styled.nav`
+  display: ${props => (props.isOpened ? 'block' : 'none')};
   flex-direction: column;
   justify-content: center;
   margin-top: 122px;
@@ -16,19 +16,19 @@ const Menu = styled.nav`
 `;
 function Navigation(props) {
   return (
-    <Menu isActive={props.isActive}>
-      <MenuItem title="FOOTBALL&nbsp;" />
-      <MenuItem title="RUNNING&nbsp;" />
-      <MenuItem title="BASKETBALL&nbsp;" />
-    </Menu>
+    <MenuWrapper isOpened={props.isOpened}>
+      <Menu title="FOOTBALL" />
+      <Menu title="RUNNING" />
+      <Menu title="BASKETBALL" />
+    </MenuWrapper>
   );
 }
 
 Navigation.propTypes = {
-  isActive: PropTypes.bool,
+  isOpened: PropTypes.bool,
 };
 Navigation.defaultProps = {
-  isActive: true,
+  isOpened: true,
 };
 
 export default Navigation;

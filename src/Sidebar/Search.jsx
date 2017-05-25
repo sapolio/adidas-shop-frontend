@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Icon from './images/search-icon.png';
 
 const Form = styled.form`
-  display: ${props => (props.isActive ? 'block' : 'none')};
+  display: ${props => (props.isOpened ? 'block' : 'none')};
   flex-direction: row;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -25,7 +25,7 @@ const Input = styled.input`
 `;
 function Search(props) {
   return (
-    <Form action="#" isActive={props.isActive}>
+    <Form action="#" isOpened={props.isOpened}>
       <img src={Icon} alt="search icon" />
       <Input type="text" />
     </Form>
@@ -33,10 +33,10 @@ function Search(props) {
 }
 
 Search.propTypes = {
-  isActive: PropTypes.bool,
+  isOpened: PropTypes.bool,
 };
 Search.defaultProps = {
-  isActive: true,
+  isOpened: true,
 };
 
 export default Search;

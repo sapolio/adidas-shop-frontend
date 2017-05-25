@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import MenuArrow from './images/menu-arrow.png';
 import SubMenu from './SubMenu';
 
-const MenuItem = styled.button`
+const Button = styled.button`
   padding: 0;
   cursor: pointer;
   border: none;
@@ -24,6 +24,7 @@ const MenuItem = styled.button`
 `;
 const Arrow = styled.img`
   margin-bottom: 4px;
+  margin-left: 4px;
   `;
 
 class Menu extends Component {
@@ -40,10 +41,10 @@ class Menu extends Component {
   render() {
     return (
       <div>
-        <MenuItem onClick={this.handleClick} isActive={this.state.isActive}>
+        <Button onClick={this.handleClick} isActive={this.state.isActive}>
           {this.props.title}
-          <Arrow src={MenuArrow} alt="strelka" />
-        </MenuItem>
+          <Arrow src={MenuArrow} alt="menu-arrow" />
+        </Button>
         {this.state.isActive && <SubMenu />}
       </div>
     );
