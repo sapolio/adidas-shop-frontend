@@ -28,6 +28,7 @@ const Aside = styled.aside`
     position: relative;
     display:block;
     max-width: 414px;
+    min-height: 100vh;
     padding-top: 50px;
   };
 `;
