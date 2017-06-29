@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import Large from './images/details/large.png';
+import Large from './images/details/large-4.png';
 import Miniature1 from './images/details/mini-1.png';
 import Miniature2 from './images/details/mini-2.png';
 import Miniature3 from './images/details/mini-3.png';
@@ -40,22 +40,37 @@ const Img = styled.img`
     max-height: 120px;
   }
 `;
-export default () => (
-  <div>
-    <LargePicture src={Large} alt="large" />
-    <MiniatureRow>
-      <Miniature>
-        <Img src={Miniature1} alt="1" />
-      </Miniature>
-      <Miniature>
-        <Img src={Miniature2} alt="2" />
-      </Miniature>
-      <Miniature>
-        <Img src={Miniature3} alt="3" />
-      </Miniature>
-      <Miniature>
-        <Img src={Miniature4} alt="4" />
-      </Miniature>
-    </MiniatureRow>
-  </div>
-);
+// In progress...
+export default class ImgCollection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { current: 1 };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({
+      isActive: 1,
+    });
+  }
+  render() {
+    return (
+      <div>
+        <LargePicture src={Large} alt="large" />
+        <MiniatureRow>
+          <Miniature onClick={this.handleClick}>
+            <Img src={Miniature1} alt="1" />
+          </Miniature>
+          <Miniature onClick={this.handleClick}>
+            <Img src={Miniature2} alt="2" />
+          </Miniature>
+          <Miniature onClick={this.handleClick}>
+            <Img src={Miniature3} alt="3" />
+          </Miniature>
+          <Miniature onClick={this.handleClick}>
+            <Img src={Miniature4} alt="4" />
+          </Miniature>
+        </MiniatureRow>
+      </div>
+    );
+  }
+}

@@ -66,7 +66,7 @@ const Button = styled.div`
 class NavPanel extends Component {
   constructor(props) {
     super(props);
-    this.state = { isOpened: true };
+    this.state = { isOpened: false };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
