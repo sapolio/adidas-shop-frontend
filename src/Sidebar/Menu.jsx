@@ -1,13 +1,17 @@
-import React from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import MenuArrow from './images/menu-arrow.png';
 
-const MenuItem = styled(Link)`
+const Button = styled.button`
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
   font-size: 24px;
   color: ${props => (props.isActive ? '#ffffff' : '#303030')};
   text-decoration: none;
-  padding-top: 26px;
   font-family: AvenirNext-Bold;
   font-weight: bold;
   transition-property: color;
@@ -17,48 +21,46 @@ const MenuItem = styled(Link)`
     color: #797979;
     }
 `;
-const SubMenuItem = styled(Link)`
-  font-size: 24px;
-  text-decoration: none;
-  padding-bottom: 26px;
-  font-family: AndaleMono;
-  color: ${props => (props.isActive ? '#ffffff' : '#3c3c3c')};
-  transition-property: color;
-  transition-duration: 200ms;
-
-  &:hover {
-    color: #797979;
-    }
-`;
 const Arrow = styled.img`
   margin-bottom: 4px;
+  margin-left: 4px;
   `;
-const Menu = styled.nav`
-  display: none;
-  flex-direction: column;
-  margin-top: 122px;
-  text-align: center;
-  @media (min-width: 768px) {
-    display: flex;
-  }
-`;
-const SubMenu = styled.nav`
-  display: flex;
+const LinkWrapper = styled.div`
+  display: ${props => (props.isActive ? 'flex' : 'none')};
   flex-direction: column;
   margin-top: 16px;
 `;
-export default () => (
-  <Menu>
-    <MenuItem to="/details" isActive>
-      SPORTS&nbsp;
-      <Arrow src={MenuArrow} alt="strelka" />
-    </MenuItem>
-    <SubMenu>
-      <SubMenuItem to="/details" isActive>SHOES</SubMenuItem>
-      <SubMenuItem to="/details">CLOTHING</SubMenuItem>
-      <SubMenuItem to="/details">ACCESSORIES</SubMenuItem>
-    </SubMenu>
-    <MenuItem to="/details">BRANDS</MenuItem>
-    <MenuItem to="/details">MICOACH</MenuItem>
-  </Menu>
-);
+
+class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isActive: false };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState(prevState => ({
+      isActive: !prevState.isActive,
+    }));
+  }
+  render() {
+    return (
+      <div>
+        <Button onClick={this.handleClick} isActive={this.state.isActive}>
+          {this.props.title}
+          <Arrow src={MenuArrow} alt="menu-arrow" />
+        </Button>
+        <LinkWrapper isActive={this.state.isActive}>
+          {this.props.children}
+        </LinkWrapper>
+      </div>
+    );
+  }
+}
+Menu.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.element,
+};
+Menu.defaultProps = {
+  children: null,
+};
+export default Menu;

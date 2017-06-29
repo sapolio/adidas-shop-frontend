@@ -17,22 +17,22 @@ export default () => (
     <Filters />
     <CardsWrapper>
       <Row>
-        <Col type="row" xs={12} sm={6} md={6} lg={4}>
+        <Col type="row" xs={12} sm={6} md={4} lg={3}>
           <Card icon={icon1} title="0001" price="170" sale />
         </Col>
-        <Col type="row" xs={12} sm={6} md={6} lg={4}>
+        <Col type="row" xs={12} sm={6} md={4} lg={3}>
           <Card icon={icon3} title="0003" price="240.99" />
         </Col>
-        <Col type="row" xs={12} sm={6} md={6} lg={4}>
+        <Col type="row" xs={12} sm={6} md={4} lg={3}>
           <Card icon={icon1} title="0001" price="1024" />
         </Col>
-        <Col type="row" xs={12} sm={6} md={6} lg={4}>
+        <Col type="row" xs={12} sm={6} md={4} lg={3}>
           <Card icon={icon1} title="0001" price="170" />
         </Col>
-        <Col type="row" xs={12} sm={6} md={6} lg={4}>
+        <Col type="row" xs={12} sm={6} md={4} lg={3}>
           <Card icon={icon2} title="0002" price="170" sale />
         </Col>
-        <Col type="row" xs={12} sm={6} md={6} lg={4}>
+        <Col type="row" xs={12} sm={6} md={4} lg={3}>
           <Card icon={icon3} title="0003" price="170" />
         </Col>
       </Row>

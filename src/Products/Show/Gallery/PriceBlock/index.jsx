@@ -4,23 +4,37 @@ import ColorSelect from './ColorSelect';
 import Label from '../../../../components/Label';
 
 const Header = styled.div`
-  position: absolute;
-  right: 33px;
-  top: 39px;
+  display: flex;
+  flex-direction: column-reverse;
+  @media (min-width: 768px) {
+    position: absolute;
+    right: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 `;
 const Meta = styled.div`
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  width: 217px;
+  width: 100%;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 const Price = styled.h2`
-  margin: 21px -6px;
+  margin: 0;
+  margin-bottom: 8px;
   font-family: AvenirNext-Bold;
   font-size: 80px;
   font-weight: bold;
-  text-align: right;
+  line-height: 1.2;
   color: #e2e2e2;
+  @media (min-width: 768px) {
+    padding-top: 20px;
+    line-height: normal;
+  }
 `;
 export default () => (
   <Header>
